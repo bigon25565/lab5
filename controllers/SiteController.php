@@ -61,6 +61,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+//        return $this->render('index');
+//        \Yii::$app->response->format = \yii\web\Response::FORMAT_XML;
+//        $items = ['guest' => ['f_name'=>'john','l_name'=>'lol'], 'guest1' => ['f_name','l_name']];
         return $this->render('index');
     }
 
