@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Server;
 
 class SiteController extends Controller
 {
@@ -61,6 +62,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
+
+        $items= new Server;
+        $items=$items->getIt(1);
+        $lel=$items->items;
+        echo '<pre>';
+        print_r($lel);
+        echo '</pre>';
+        die;
 //        return $this->render('index');
 //        \Yii::$app->response->format = \yii\web\Response::FORMAT_XML;
 //        $items = ['guest' => ['f_name'=>'john','l_name'=>'lol'], 'guest1' => ['f_name','l_name']];
