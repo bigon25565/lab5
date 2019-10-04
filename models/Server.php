@@ -39,7 +39,7 @@ class Server extends \yii\db\ActiveRecord
     }
     public function getCat()
     {
-        return $this->find()->asArray()->all();
+        return Server::find()->asArray()->all();
     }
     public function getIt($id)
     {
