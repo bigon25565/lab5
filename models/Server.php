@@ -49,6 +49,20 @@ class Server extends \yii\db\ActiveRecord
     {
         return Server::find()->where(['<>','id', $id])->asArray()->all();
     }
+    public function Hello()
+    {
+        return 'привет, я работаю';
+    }
+    public static function server()
+    {
+        $server = new \SoapServer(null, array('uri' => "http://lab5/web/index.php?r=soap/index"));
+        $server->setObject(new Server());
+        ob_start();
+        $server->handle();
+        $result = ob_get_contents();
+        ob_end_clean();
+        return $result;
+    }
     /**
      * {@inheritdoc}
      */
@@ -69,6 +83,6 @@ class Server extends \yii\db\ActiveRecord
      */
     public function getItems()
     {
-        return $this->hasMany(Items::className(), ['category_id' => 'id']);
+        return $this->hasMany(Asd::className(), ['category_id' => 'id']);
     }
 }

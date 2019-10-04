@@ -16,7 +16,7 @@ use Yii;
  *
  * @property Category $category
  */
-class Items extends \yii\db\ActiveRecord
+class Asd extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
