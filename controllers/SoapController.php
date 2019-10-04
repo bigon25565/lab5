@@ -27,6 +27,10 @@ class SoapController extends \yii\web\Controller
 ////        $server->addFunction(SOAP_FUNCTIONS_ALL);
 //        $server->handle();
 //    }
+Public function JokesOnYa()
+{
+    
+}
 //
 
     public function actionIndex(){
